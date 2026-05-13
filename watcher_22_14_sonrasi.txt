@@ -1,0 +1,525 @@
+2026-05-09 22:14:23  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+2026-05-09 22:14:23  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+2026-05-09 22:14:23  INFO      =================================================================
+2026-05-09 22:14:23  INFO        AAVE V3 LIQUIDATION WATCHER — ARB MODU (v13 OptiPair)
+2026-05-09 22:14:23  INFO        Zincirler : ['ARB']
+2026-05-09 22:14:23  INFO        WSS       : ['ARB']
+2026-05-09 22:14:23  INFO        JSON      : targets.json
+2026-05-09 22:14:23  INFO        Oracle    : {'ARB': '0xb56c2F0B653B2e0b10C9b928C8580Ac5Df02C7C7'}
+2026-05-09 22:14:23  INFO        Telegram  : AKTİF
+2026-05-09 22:14:23  INFO      =================================================================
+2026-05-09 22:14:23  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+2026-05-09 22:14:23  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+2026-05-09 22:14:23  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh
+2026-05-09 22:14:24  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh. Retrying in 1.8 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:14:26  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh
+2026-05-09 22:14:27  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh. Retrying in 3.1 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:14:30  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh
+2026-05-09 22:14:31  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh. Retrying in 5.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:14:36  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh
+2026-05-09 22:14:37  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh. Retrying in 9.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:14:47  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh
+2026-05-09 22:14:48  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST
+2026-05-09 22:14:49  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST. Retrying in 1.8 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:14:51  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST
+2026-05-09 22:14:52  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST. Retrying in 3.1 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:14:55  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST
+2026-05-09 22:14:56  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST. Retrying in 5.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:01  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST
+2026-05-09 22:15:02  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST. Retrying in 9.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:12  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/02nqW0owEnidVb7REEIST
+2026-05-09 22:15:13  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY
+2026-05-09 22:15:14  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY. Retrying in 1.8 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:16  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY
+2026-05-09 22:15:17  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY. Retrying in 3.1 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:20  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY
+2026-05-09 22:15:21  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY. Retrying in 5.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:26  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY
+2026-05-09 22:15:27  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY. Retrying in 9.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:37  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/VRuDtwRDd4o3lli9iSIYY
+2026-05-09 22:15:38  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe
+2026-05-09 22:15:39  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe. Retrying in 1.8 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:41  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe
+2026-05-09 22:15:42  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe. Retrying in 3.1 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:45  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe
+2026-05-09 22:15:46  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe. Retrying in 5.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:15:51  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe
+2026-05-09 22:15:52  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe. Retrying in 9.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:02  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/ZVYYXrU0BFadlWSMFFpCe
+2026-05-09 22:16:03  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx
+2026-05-09 22:16:04  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx. Retrying in 1.8 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:06  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx
+2026-05-09 22:16:07  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx. Retrying in 3.1 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:10  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx
+2026-05-09 22:16:11  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx. Retrying in 5.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:16  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx
+2026-05-09 22:16:17  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx. Retrying in 9.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:27  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/QG4cv4TmShxNJTfWpQZVx
+2026-05-09 22:16:28  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv
+2026-05-09 22:16:29  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv. Retrying in 1.8 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:30  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv
+2026-05-09 22:16:32  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv. Retrying in 3.1 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:35  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv
+2026-05-09 22:16:36  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv. Retrying in 5.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:41  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv
+2026-05-09 22:16:42  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv. Retrying in 9.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:51  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/wLD4zhxbuw6q8IJI980wv
+2026-05-09 22:16:53  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17
+2026-05-09 22:16:54  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17. Retrying in 1.8 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:16:55  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17
+2026-05-09 22:16:56  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17. Retrying in 3.1 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:17:00  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17
+2026-05-09 22:17:01  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17. Retrying in 5.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:17:06  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17
+2026-05-09 22:17:07  INFO      Could not connect to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17. Retrying in 9.4 seconds.
+Traceback (most recent call last):
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/persistent.py", line 233, in connect
+    await self._provider_specific_connect()
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/persistent/websocket.py", line 135, in _provider_specific_connect
+    self._ws = await connect(self.endpoint_uri, **self.websocket_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 654, in __await_impl__
+    await protocol.handshake(
+  File "/home/ubuntu/files/venv/lib/python3.12/site-packages/websockets/legacy/client.py", line 318, in handshake
+    raise InvalidStatusCode(status_code, response_headers)
+websockets.legacy.exceptions.InvalidStatusCode: server rejected WebSocket connection: HTTP 429
+2026-05-09 22:17:16  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/SkZdT8uyUzJyjRXHYUr17
+2026-05-09 22:17:17  INFO      Connecting to: wss://arb-mainnet.g.alchemy.com/v2/J9yqbttNLbYxRsgf8BYOk
+2026-05-09 22:17:18  INFO      Successfully connected to: wss://arb-mainnet.g.alchemy.com/v2/J9yqbttNLbYxRsgf8BYOk
+2026-05-09 22:17:18  INFO      WebSocketProvider listener background task started. Storing all messages in appropriate request processor queues / caches to be processed.
+2026-05-09 22:17:18  INFO      [ARB] WSS bağlı (...v2/J9yqbttNLbYxRsgf8BYOk). Chain ID: 42161
+2026-05-09 22:17:18  INFO      [WSS-POOL] ARB: 11 WSS endpoint (şarjör + ARB_WSS)
+2026-05-09 22:17:18  INFO      [WSS-POOL] ARB: 11 WSS endpoint hazır — round-robin aktif.
+2026-05-09 22:17:18  INFO        3 paralel task:
+2026-05-09 22:17:18  INFO          - targets-writer
+2026-05-09 22:17:18  INFO          - cold-ARB
+2026-05-09 22:17:18  INFO          - wss-ARB
+2026-05-09 22:17:18  INFO      =================================================================
+2026-05-09 22:17:18  INFO      [TargetsStore] Writer task başladı → targets.json
+2026-05-09 22:17:18  INFO      [ARB-WSS] Block listener başladı — pool size=11
+2026-05-09 22:17:18  WARNING   [WSS-POOL] 429/403 → sonraki endpoint'e kayıldı (idx=2/11)
+2026-05-09 22:17:18  WARNING   [ARB-WSS] 429/rate-limit → sonraki WSS endpoint'e geçiliyor. 2s backoff.
+2026-05-09 22:17:18  INFO      [ARB] Reserve cache: 19 token (18 bilinen, 1 TKN_ fallback)
+2026-05-09 22:17:18  INFO      [ARB-COLD] Borçlu listesi çekiliyor (schema: positions) → https://gateway-arbitrum.network.thegraph.com/api/b3345c316c...Cw5mhoHZq3T7guRpuNPf
+2026-05-09 22:17:18  WARNING   [ARB-COLD] GraphQL errors (skip=0): [{"message": "auth error: payment required for subsequent requests for this API key"}]
+2026-05-09 22:17:19  WARNING   [ARB-COLD] GraphQL errors (skip=0): [{"message": "auth error: payment required for subsequent requests for this API key"}]
+2026-05-09 22:17:20  WARNING   [WSS-POOL] 429/403 → sonraki endpoint'e kayıldı (idx=4/11)
+2026-05-09 22:17:20  WARNING   [ARB-WSS] 429/rate-limit → sonraki WSS endpoint'e geçiliyor. 4s backoff.
+2026-05-09 22:17:20  WARNING   [ARB-COLD] GraphQL errors (skip=0): [{"message": "auth error: payment required for subsequent requests for this API key"}]
+2026-05-09 22:17:20  ERROR     [ARB-COLD] Graph yanıtında data=null — GRAPH_API_KEY veya ARB_SUBGRAPH_ID / ARB_SUBGRAPH_URL kontrol edin (The Graph Studio).
+2026-05-09 22:17:20  WARNING   [ARB-COLD] Borçlu listesi boş, 60s sonra...
+2026-05-09 22:17:24  WARNING   [WSS-POOL] 429/403 → sonraki endpoint'e kayıldı (idx=6/11)
+2026-05-09 22:17:24  WARNING   [ARB-WSS] 429/rate-limit → sonraki WSS endpoint'e geçiliyor. 8s backoff.
+2026-05-09 22:17:32  WARNING   [WSS-POOL] 429/403 → sonraki endpoint'e kayıldı (idx=8/11)
+2026-05-09 22:17:32  WARNING   [ARB-WSS] 429/rate-limit → sonraki WSS endpoint'e geçiliyor. 16s backoff.
+2026-05-09 22:17:48  INFO      [ARB-WSS] Bağlandı. sub_id=0xed285a9d009a06... endpoint=...y.com/v2/iQHdEN7nL8ElpR6JuFWQi
+2026-05-09 22:18:20  INFO      [ARB-COLD] Borçlu listesi çekiliyor (schema: positions) → https://gateway-arbitrum.network.thegraph.com/api/b3345c316c...Cw5mhoHZq3T7guRpuNPf
+2026-05-09 22:19:33  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x996596Dc | Toplam: $1,780 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:33  WARNING   [ARB-OPTI] Puanlanabilir pari yok (E-Mode filtre / tüm dust?) | 0x45847bb2
+2026-05-09 22:19:33  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xc0d129AD | Toplam: $3,223,981 | Net Açık Volatil: $119,895 (3.7%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:34  INFO      [CU-METER] rpc_ok=50 est_CU≈1300 | budget=30000000 CU (~0.004% tahmini) | örnek_label=MULTICALL-HF
+2026-05-09 22:19:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x61838585 | Toplam: $18,488 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x496b0Da2 | Toplam: $507,039 | Net Açık Volatil: $23,698 (4.7%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x85733dd0 | Toplam: $510 | Net Açık Volatil: $21 (4.1%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x86DB3BD2 | Toplam: $373 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:45  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xEDd71847 | Toplam: $455,679 | Net Açık Volatil: $18,200 (4.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:45  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x96B4a008 | Toplam: $363 | Net Açık Volatil: $14 (3.7%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:45  WARNING   [ARB-OPTI] Zenginleştirme sonrası yetersiz pozisyon | 0x767737EE | borç=1 teminat=0 → fallback
+2026-05-09 22:19:45  INFO      [ARB-COLD] HOT_LIST | 0x767737EE1DAF0e8b106eC769300c95229203487b | HF: 1.0103 | ToplamBorc: $1980.98 | ToplamTeminat: $2563.87 | DAI($1980.98)->WETH($2563.87) [HEDGE] | CF: %50 | Net: +$45.96
+2026-05-09 22:19:45  INFO      [ARB-WSS] 🧠 Saf Python: 0.087 ms (1 cüzdan)
+2026-05-09 22:19:46  INFO      [CU-METER] rpc_ok=100 est_CU≈2594 | budget=30000000 CU (~0.009% tahmini) | örnek_label=MULTICALL-HF
+2026-05-09 22:19:47  INFO      [ARB-WSS] 🧠 Saf Python: 0.057 ms (1 cüzdan)
+2026-05-09 22:19:48  INFO      [ARB-WSS] 🧠 Saf Python: 0.072 ms (1 cüzdan)
+2026-05-09 22:19:49  INFO      [ARB-WSS] 🧠 Saf Python: 0.077 ms (1 cüzdan)
+2026-05-09 22:19:50  INFO      [ARB-WSS] 🧠 Saf Python: 0.056 ms (1 cüzdan)
+2026-05-09 22:19:50  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x420ef173 | Toplam: $12,161 | Net Açık Volatil: $476 (3.9%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:51  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x9A720ced | Toplam: $2,037 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:51  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x5579D5cE | Toplam: $448 | Net Açık Volatil: $18 (4.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:51  INFO      [ARB-WSS] 🧠 Saf Python: 0.084 ms (1 cüzdan)
+2026-05-09 22:19:52  INFO      [ARB-WSS] 🧠 Saf Python: 0.236 ms (1 cüzdan)
+2026-05-09 22:19:53  INFO      [ARB-WSS] 🧠 Saf Python: 0.070 ms (1 cüzdan)
+2026-05-09 22:19:54  INFO      [ARB-WSS] 🧠 Saf Python: 0.072 ms (1 cüzdan)
+2026-05-09 22:19:55  INFO      [ARB-WSS] 🧠 Saf Python: 0.103 ms (1 cüzdan)
+2026-05-09 22:19:56  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xA7bAa84d | Toplam: $49,783 | Net Açık Volatil: $2,120 (4.3%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:56  INFO      [CU-METER] rpc_ok=150 est_CU≈3894 | budget=30000000 CU (~0.013% tahmini) | örnek_label=ARB-ENRICH
+2026-05-09 22:19:56  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x0a56f38F | Toplam: $8,752 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:56  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xFE27da4f | Toplam: $812 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:56  INFO      [ARB-WSS] 🧠 Saf Python: 0.070 ms (1 cüzdan)
+2026-05-09 22:19:56  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xB08B076d | Toplam: $418 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:57  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x11650b27 | Toplam: $16,523 | Net Açık Volatil: $283 (1.7%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:19:57  WARNING   [ARB-OPTI] Puanlanabilir pari yok (E-Mode filtre / tüm dust?) | 0xC3bBF860
+2026-05-09 22:19:58  INFO      [ARB-WSS] 🧠 Saf Python: 0.073 ms (1 cüzdan)
+2026-05-09 22:19:59  INFO      [ARB-WSS] 🧠 Saf Python: 0.072 ms (1 cüzdan)
+2026-05-09 22:20:00  INFO      [ARB-WSS] 🧠 Saf Python: 0.103 ms (1 cüzdan)
+2026-05-09 22:20:01  INFO      [ARB-WSS] 🧠 Saf Python: 0.075 ms (1 cüzdan)
+2026-05-09 22:20:02  INFO      [ARB-WSS] 🧠 Saf Python: 0.070 ms (1 cüzdan)
+2026-05-09 22:20:03  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x2DcCa921 | Toplam: $9,127 | Net Açık Volatil: $369 (4.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:03  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xE2599370 | Toplam: $15,346 | Net Açık Volatil: $618 (4.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:03  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x7cD8d5D5 | Toplam: $672 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:03  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x270d1C8C | Toplam: $77,468 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:04  INFO      [ARB-WSS] 🧠 Saf Python: 0.060 ms (1 cüzdan)
+2026-05-09 22:20:04  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xB101A0E5 | Toplam: $529 | Net Açık Volatil: $21 (3.9%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:05  INFO      [ARB-WSS] 🧠 Saf Python: 0.062 ms (1 cüzdan)
+2026-05-09 22:20:06  INFO      [ARB-WSS] 🧠 Saf Python: 0.205 ms (1 cüzdan)
+2026-05-09 22:20:07  INFO      [ARB-WSS] 🧠 Saf Python: 0.055 ms (1 cüzdan)
+2026-05-09 22:20:07  INFO      [CU-METER] rpc_ok=200 est_CU≈5194 | budget=30000000 CU (~0.017% tahmini) | örnek_label=MULTICALL-HF
+2026-05-09 22:20:08  INFO      [ARB-WSS] 🧠 Saf Python: 0.071 ms (1 cüzdan)
+2026-05-09 22:20:09  INFO      [ARB-WSS] 🧠 Saf Python: 0.073 ms (1 cüzdan)
+2026-05-09 22:20:09  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x3A2e05Ad | Toplam: $10,438 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:10  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xe184689D | Toplam: $2,027 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:10  INFO      [ARB-WSS] 🧠 Saf Python: 0.070 ms (1 cüzdan)
+2026-05-09 22:20:11  INFO      [ARB-WSS] 🧠 Saf Python: 0.107 ms (1 cüzdan)
+2026-05-09 22:20:12  INFO      [ARB-WSS] 🧠 Saf Python: 0.071 ms (1 cüzdan)
+2026-05-09 22:20:14  INFO      [ARB-WSS] 🧠 Saf Python: 0.057 ms (1 cüzdan)
+2026-05-09 22:20:15  INFO      [ARB-WSS] 🧠 Saf Python: 0.081 ms (1 cüzdan)
+2026-05-09 22:20:15  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xdf06373d | Toplam: $10,844 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:16  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xdf9E6Bea | Toplam: $324,613 | Net Açık Volatil: $15,748 (4.9%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:16  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xB389b0E8 | Toplam: $6,058 | Net Açık Volatil: $249 (4.1%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:16  INFO      [ARB-WSS] 🧠 Saf Python: 0.056 ms (1 cüzdan)
+2026-05-09 22:20:16  INFO      [ARB-OPTI] ✅ Optimal Pari | 0x85281A9E | BORÇ: USDC $2035.97 → TEMİNAT: LINK $457.69 | E-Mode: Yok | Slip: $3.390 | Net: $30.20
+2026-05-09 22:20:16  INFO      [ARB-COLD] HOT_LIST | 0x85281A9E268E8a4280A451eEef18e4307143225a | HF: 1.0216 | ToplamBorc: $2035.97 | ToplamTeminat: $2694.25 | USDC($2035.97)->LINK($457.69) [HEDGE] | CF: %50 | Net: +$32.32
+2026-05-09 22:20:17  INFO      [ARB-WSS] 🧠 Saf Python: 0.090 ms (2 cüzdan)
+2026-05-09 22:20:17  INFO      [CU-METER] rpc_ok=250 est_CU≈6488 | budget=30000000 CU (~0.022% tahmini) | örnek_label=MULTICALL-HF
+2026-05-09 22:20:18  INFO      [ARB-WSS] 🧠 Saf Python: 0.115 ms (2 cüzdan)
+2026-05-09 22:20:19  INFO      [ARB-WSS] 🧠 Saf Python: 0.114 ms (2 cüzdan)
+2026-05-09 22:20:20  INFO      [ARB-WSS] 🧠 Saf Python: 0.107 ms (2 cüzdan)
+2026-05-09 22:20:21  INFO      [ARB-WSS] 🧠 Saf Python: 0.080 ms (2 cüzdan)
+2026-05-09 22:20:21  WARNING   [ARB-OPTI] Zenginleştirme sonrası yetersiz pozisyon | 0x4855E1de | borç=1 teminat=0 → fallback
+2026-05-09 22:20:22  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x91F52dF6 | Toplam: $1,305 | Net Açık Volatil: $53 (4.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:22  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xb8770f7D | Toplam: $2,548 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:23  INFO      [ARB-WSS] 🧠 Saf Python: 0.085 ms (2 cüzdan)
+2026-05-09 22:20:24  INFO      [ARB-WSS] 🧠 Saf Python: 0.085 ms (2 cüzdan)
+2026-05-09 22:20:25  INFO      [ARB-WSS] 🧠 Saf Python: 0.115 ms (2 cüzdan)
+2026-05-09 22:20:26  INFO      [ARB-WSS] 🧠 Saf Python: 0.152 ms (2 cüzdan)
+2026-05-09 22:20:27  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x28e752aA | Toplam: $221 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:27  INFO      [ARB-WSS] 🧠 Saf Python: 0.161 ms (2 cüzdan)
+2026-05-09 22:20:27  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xccE8bC31 | Toplam: $409 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:28  INFO      [CU-METER] rpc_ok=300 est_CU≈7788 | budget=30000000 CU (~0.026% tahmini) | örnek_label=ARB-ENRICH
+2026-05-09 22:20:28  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x742Db147 | Toplam: $66,191 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:28  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x6280e6D2 | Toplam: $15,400 | Net Açık Volatil: $0 (0.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:28  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x4f1f9133 | Toplam: $631 | Net Açık Volatil: $28 (4.5%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:29  INFO      [ARB-WSS] 🧠 Saf Python: 0.110 ms (2 cüzdan)
+2026-05-09 22:20:30  INFO      [ARB-WSS] 🧠 Saf Python: 0.087 ms (2 cüzdan)
+2026-05-09 22:20:31  INFO      [ARB-WSS] 🧠 Saf Python: 0.108 ms (2 cüzdan)
+2026-05-09 22:20:32  INFO      [ARB-WSS] 🧠 Saf Python: 0.166 ms (2 cüzdan)
+2026-05-09 22:20:33  INFO      [ARB-WSS] 🧠 Saf Python: 0.088 ms (2 cüzdan)
+2026-05-09 22:20:33  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xd6B18485 | Toplam: $474 | Net Açık Volatil: $20 (4.2%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:33  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xF9D4FD46 | Toplam: $10,325 | Net Açık Volatil: $914 (8.8%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:33  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xBFC1A8bC | Toplam: $1,800,226 | Net Açık Volatil: $67,037 (3.7%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:34  INFO      [ARB-WSS] 🧠 Saf Python: 0.109 ms (2 cüzdan)
+2026-05-09 22:20:35  INFO      [ARB-WSS] 🧠 Saf Python: 0.099 ms (2 cüzdan)
+2026-05-09 22:20:36  INFO      [ARB-WSS] 🧠 Saf Python: 0.106 ms (2 cüzdan)
+2026-05-09 22:20:37  INFO      [ARB-WSS] 🧠 Saf Python: 0.091 ms (2 cüzdan)
+2026-05-09 22:20:38  INFO      [CU-METER] rpc_ok=350 est_CU≈9088 | budget=30000000 CU (~0.030% tahmini) | örnek_label=MULTICALL-HF
+2026-05-09 22:20:38  INFO      [ARB-WSS] 🧠 Saf Python: 0.114 ms (2 cüzdan)
+2026-05-09 22:20:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xfB74196e | Toplam: $2,276,227 | Net Açık Volatil: $68,422 (3.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:39  INFO      [ARB-WSS] 🧠 Saf Python: 0.078 ms (2 cüzdan)
+2026-05-09 22:20:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x623A0dFe | Toplam: $653 | Net Açık Volatil: $26 (4.0%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xc6D5Df1e | Toplam: $293 | Net Açık Volatil: $14 (4.9%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:39  WARNING   [ARB-OPTI] Puanlanabilir pari yok (E-Mode filtre / tüm dust?) | 0xcB7d5B9C
+2026-05-09 22:20:39  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0xF0346594 | Toplam: $2,294,396 | Net Açık Volatil: $85,439 (3.7%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:40  INFO      [ARB-WSS] 🧠 Saf Python: 0.106 ms (2 cüzdan)
+2026-05-09 22:20:41  INFO      [ARB-WSS] 🧠 Saf Python: 0.104 ms (2 cüzdan)
+2026-05-09 22:20:43  INFO      [ARB-WSS] 🧠 Saf Python: 0.105 ms (2 cüzdan)
+2026-05-09 22:20:44  INFO      [ARB-WSS] 🧠 Saf Python: 0.095 ms (2 cüzdan)
+2026-05-09 22:20:45  INFO      [ARB-WSS] 🧠 Saf Python: 0.110 ms (2 cüzdan)
+2026-05-09 22:20:45  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x85031b1A | Toplam: $182,399 | Net Açık Volatil: $7,714 (4.2%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:45  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x15C558B9 | Toplam: $113,179 | Net Açık Volatil: $5,434 (4.8%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız
+2026-05-09 22:20:45  INFO      [ARB-OPTI] HEDGED/STABLE-HEAVY ATILDI | 0x518B81c7 | Toplam: $544 | Net Açık Volatil: $26 (4.7%) | Delta-Neutral veya stabil ağırlık — tasfiye imkansız

@@ -1,0 +1,1103 @@
+ubuntu@ip-172-31-69-135:~/files$ pm2 start cluster_sniper.py --interpreter python3 --name "arb"
+[PM2] Applying action restartProcessId on app [arb](ids: [ 4 ])
+[PM2] [arb](4) ✓
+[PM2] Process successfully started
+⇆ PM2+ activated | Instance Name: ip-172-31-69-135-daaa | Dash: https://app.pm2.io/#/r/8z0ri6tds0s5t6m
+┌────┬───────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name              │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼───────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0  │ SNIPER-ARB        │ default     │ N/A     │ fork    │ 0        │ 0      │ 2    │ stopped   │ 0%       │ 0b       │ ubuntu   │ disabled │
+│ 1  │ SNIPER-BASE       │ default     │ N/A     │ fork    │ 0        │ 0      │ 1    │ stopped   │ 0%       │ 0b       │ ubuntu   │ disabled │
+│ 3  │ TARGET-WATCHER    │ default     │ N/A     │ fork    │ 168658   │ 23m    │ 21   │ online    │ 0%       │ 98.8mb   │ ubuntu   │ disabled │
+│ 4  │ arb               │ default     │ N/A     │ fork    │ 170175   │ 0s     │ 180  │ online    │ 0%       │ 7.9mb    │ ubuntu   │ disabled │
+└────┴───────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+ubuntu@ip-172-31-69-135:~/files$ pm2 logs arb
+[TAILING] Tailing last 15 lines for [arb] process (change the value with --lines option)
+/home/ubuntu/.pm2/logs/arb-out.log last 15 lines:
+4|arb      | 2026-05-09 22:37:38  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb      | 2026-05-09 22:37:39  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb      | 2026-05-09 22:37:39  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb      | 2026-05-09 22:37:39  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb      | 2026-05-09 22:37:39  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb      | 2026-05-09 22:37:39  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb      | 2026-05-09 22:37:39  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb      | 2026-05-09 22:37:39  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb      | 2026-05-09 22:37:40  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb      | 2026-05-09 22:37:40  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb      | 2026-05-09 22:37:40  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb      | 2026-05-09 22:37:40  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb      | 2026-05-09 22:37:40  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb      | 2026-05-09 22:37:40  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb      | 2026-05-09 22:37:40  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+
+/home/ubuntu/.pm2/logs/arb-error.log last 15 lines:
+4|arb      |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb      |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb      |     return await func(provider, method, params)
+4|arb      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb      |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb      |     raw_response = await self._make_request(method, request_data)
+4|arb      |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb      |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb      |     return await self._request_session_manager.async_make_post_request(
+4|arb      |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb      |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb      |     response.raise_for_status()
+4|arb      |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb      |     raise ClientResponseError(
+4|arb      | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+
+4|arb  | 2026-05-09 22:37:41  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:41  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:41  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:41  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:41  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:41  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:41  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^
+4|arb  | ^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^
+4|arb  | ^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:41  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:41  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:41  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:41  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:41  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:41  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:41  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |
+4|arb  | asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |
+4|arb  | return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |
+4|arb  | return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |
+4|arb  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |
+4|arb  | return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |
+4|arb  | raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |
+4|arb  |
+4|arb  |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:42  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:42  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:42  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:42  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:42  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:42  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:42  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:43  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:43  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:43  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:43  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:43  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:43  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:43  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:44  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:44  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:44  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:44  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:44  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:44  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:44  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^
+4|arb  | ^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |
+4|arb  |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError
+4|arb  | : 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:45  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:45  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:45  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:45  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:45  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:45  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:45  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |
+4|arb  | asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:46  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:46  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:46  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:46  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:46  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:46  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:46  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |
+4|arb  |       ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |
+4|arb  |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:47  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:47  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:47  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:47  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:47  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:47  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:47  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:48  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:48  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:48  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:48  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:48  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:48  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:48  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:49  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:49  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:49  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:49  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:49  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:49  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:49  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |
+4|arb  |        ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |
+4|arb  |   ^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:50  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:50  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:50  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:50  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:50  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:50  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:50  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^
+4|arb  | ^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:51  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:51  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:51  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:51  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:51  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:51  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:51  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:52  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:52  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:52  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:52  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:52  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:52  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:52  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:52  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:52  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:52  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:52  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:52  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:52  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:52  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:53  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:53  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:53  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:53  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:53  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:53  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:53  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |
+4|arb  | if not await w3.is_connected():
+4|arb  |
+4|arb  |           ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:54  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:54  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:54  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:54  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:54  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:54  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:54  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |
+4|arb  |
+4|arb  |
+4|arb  |     ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^
+4|arb  | ^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:55  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:55  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:55  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:55  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:55  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:55  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:55  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:56  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:56  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:56  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:56  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:56  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:56  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:56  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |
+4|arb  | asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |
+4|arb  | w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^
+4|arb  | ^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:57  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:57  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:57  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:57  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:57  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:57  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:57  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |
+4|arb  | w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |
+4|arb  |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:58  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:58  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:58  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:58  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:58  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:58  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:58  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  | ^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:37:59  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:37:59  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:37:59  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:37:59  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:37:59  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:37:59  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:37:59  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+4|arb  |     return future.result()
+4|arb  |            ^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2305, in main
+4|arb  |     w3_temp = await build_w3(chain_cfg.rpc_url, f"{chain_tag}-ChainID", use_rotator=True)
+4|arb  |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 672, in build_w3
+4|arb  |     if not await w3.is_connected():
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/main.py", line 499, in is_connected
+4|arb  |     return await self.provider.is_connected(show_traceback)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/async_base.py", line 225, in is_connected
+4|arb  |     response = await self.make_request(RPCEndpoint("web3_clientVersion"), [])
+4|arb  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/caching/caching_utils.py", line 367, in wrapper
+4|arb  |     return await func(provider, method, params)
+4|arb  |
+4|arb  |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 161, in make_request
+4|arb  |     raw_response = await self._make_request(method, request_data)
+4|arb  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/providers/rpc/async_rpc.py", line 151, in _make_request
+4|arb  |     return await self._request_session_manager.async_make_post_request(
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/web3/_utils/http_session_manager.py", line 326, in async_make_post_request
+4|arb  |     response.raise_for_status()
+4|arb  |   File "/home/ubuntu/files/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 636, in raise_for_status
+4|arb  |     raise ClientResponseError(
+4|arb  | aiohttp.client_exceptions.ClientResponseError: 429, message='Too Many Requests', url='https://arb-mainnet.g.alchemy.com/v2/8BAe1kHkSSOfApBOxWaqh'
+4|arb  | 2026-05-09 22:38:00  INFO      [CU-METER] Aktif — tahmini CU (dashboard yerine). Budget=30000000 CU | ALCHEMY_CU_ETH_CALL, ALCHEMY_CU_MULTICALL_PER_INNER
+4|arb  | 2026-05-09 22:38:00  INFO      [CONFIG] GRAPH_API_KEY len=32 prefix=b3345c31
+4|arb  | 2026-05-09 22:38:00  INFO      [TARGETS] ARB: 14 hedef (targets.json), 14 kayıtta parite (BORÇ/TEMİNAT) alanı var.
+4|arb  | 2026-05-09 22:38:00  INFO      [LOAD] ARB: 14 hedef yüklendi, 14/14 pair pre-populated (OptiPair).
+4|arb  | 2026-05-09 22:38:00  INFO      [ROTATOR] 10 HTTP endpoint ALCHEMY_HTTP_URLS_FILE içinden (arb_http_urls.txt)
+4|arb  | 2026-05-09 22:38:00  INFO      [ROTATOR] Şarjör hazır | 11 HTTP RPC yüklendi | Aktif: ......SOfApBOxWaqh
+4|arb  | 2026-05-09 22:38:00  INFO      [MAIN] RPC Rotator aktif | 11 HTTP endpoint | Aktif: ...SOfApBOxWaqh
+4|arb  | Traceback (most recent call last):
+4|arb  |   File "/home/ubuntu/files/cluster_sniper.py", line 2676, in <module>
+4|arb  |     asyncio.run(main())
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+4|arb  |     return runner.run(main)
+4|arb  |            ^^^^^
+4|arb  | ^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+4|arb  |     return self._loop.run_until_complete(task)
+4|arb  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+4|arb  |   File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete

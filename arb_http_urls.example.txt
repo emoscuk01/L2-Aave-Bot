@@ -1,0 +1,14 @@
+# arb_http_urls.txt örneği — SADECE HTTP şarjörü (watcher / keşif / Motor2 HF okuma, 429 rotasyonu).
+# Pompalı tx yayını buradan okunmaz; o liste .env içinde ARB_MULTI_RPC virgül listesi.
+#
+# .env:
+#   ALCHEMY_HTTP_URLS_FILE=arb_http_urls.txt
+#   ALCHEMY_HTTP_KEY_PREFIX=https://arb-mainnet.g.alchemy.com/v2/
+# (prefix yoksa yine Arbitrum Alchemy HTTP v2 kullanılır)
+#
+# Satır formatı — ikisinden biri:
+#   A) Tam URL
+#   B) Sadece Alchemy API key (a-z A-Z 0-9 _ -, 8..120 karakter) → prefix + key
+#
+# 8BAe1kHkSSOfApBOxWaqh
+# 02nqW0owEnidVb7REEIST

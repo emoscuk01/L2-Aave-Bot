@@ -1,0 +1,9 @@
+# Yerel anahtarlar / RPC listesi (commit etmeyin)
+arb_http_urls.txt
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.py[cod]
+*.log
