@@ -4,6 +4,10 @@ arb_http_urls.txt
 .env.*
 !.env.example
 
+# Watcher'ın sürekli güncellediği köprü dosyası (deploy / git pull çakışmasın)
+targets.json
+!.targets.json.example
+
 __pycache__/
 *.py[cod]
 *.log

@@ -140,7 +140,8 @@ WSS_INITIAL_BACKOFF = 2
 WSS_MAX_BACKOFF     = 60
 
 # ── JSON Export sabitleri ─────────────────────────────────────────────────────
-TARGETS_FILE      = "targets.json"
+# cluster_sniper.TARGETS_JSON_PATH ile aynı env (varsayılan: ./targets.json, Git'te yok)
+TARGETS_FILE      = os.getenv("TARGETS_JSON", "targets.json")
 TARGETS_MAX_QUEUE = 2048
 
 
