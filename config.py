@@ -34,6 +34,7 @@ _log = logging.getLogger(__name__)
 # ─────────────────────────────────────────────────────────────────────────────
 # MANUEL TASFİYE EŞİKLERİ (RT-Sync Kapalıyken Kullanılır)
 # ─────────────────────────────────────────────────────────────────────────────
+# Aave V3 Arbitrum (42161) — api.v3.aave.com GraphQL ile senkron (governance değişirse yenile)
 MANUAL_LT_VALUES = {
     "WETH":   0.84,
     "WBTC":   0.78,
@@ -44,7 +45,13 @@ MANUAL_LT_VALUES = {
     "DAI":    0.77,
     "wstETH": 0.79,
     "LINK":   0.75,
-    "AAVE":   0.66
+    "AAVE":   0.73,
+    "rETH":   0.74,
+    "weETH":  0.77,
+    "tBTC":   0.78,
+    "EURS":   0.67,
+    "FRAX":   0.72,
+    "MAI":    0.01,
 }
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -348,6 +355,8 @@ ASSET_CLASS: Dict[str, str] = {
     "FRAX":    "STABLE", "GHO":    "STABLE", "crvUSD": "STABLE",
     "USDS":    "STABLE", "EURC":   "STABLE", "EURA":   "STABLE",
     "PYUSD":   "STABLE",
+    "EURS":    "STABLE",
+    "MAI":     "STABLE",
     # On-chain Unicode / bridge varyantları
     "USD₮0":   "STABLE", "USDT0":  "STABLE", "USDt":   "STABLE",
     "USDT.e":  "STABLE", "USDTe":  "STABLE",
@@ -370,35 +379,38 @@ ASSET_CLASS: Dict[str, str] = {
 
 EMODE_BONUS = 0.01  # Aynı sınıf borç+teminat → %1
 
+# Likidasyon primi: teminat varlığı rezervi (Arbitrum V3 api.v3.aave.com ile hizalı)
 LIQUIDATION_BONUS_MAP: Dict[str, float] = {
     # Stablecoinler — %5
     "USDC": 0.05, "USDC.e": 0.05, "USDCe": 0.05,
     "USDT": 0.05, "DAI":    0.05, "LUSD":  0.05,
-    "FRAX": 0.05, "GHO":    0.05, "crvUSD":0.05,
+    "FRAX": 0.06, "GHO":    0.05, "crvUSD":0.05,
     "USDS": 0.05, "EURC":   0.05, "PYUSD": 0.05,
+    "MAI":  0.05,
     # On-chain Unicode / bridge varyantları
     "USD₮0": 0.05, "USDT0": 0.05, "USDt":   0.05,
     "USDT.e":0.05, "USDTe": 0.05,
     "USDC0": 0.05, "USDCn": 0.05,
-    # ETH ailesi — %5-7.5
+    "EURS": 0.075,
+    # ETH ailesi — Arbitrum rezerv primleri
     "WETH":    0.05, "ETH":     0.05,
-    "wstETH":  0.06, "rETH":    0.06, "cbETH":   0.06,
-    "weETH":   0.06, "ezETH":   0.075,"rsETH":   0.075,
-    "osETH":   0.075,"sfrxETH": 0.075,
-    # BTC ailesi — %7
-    "WBTC": 0.07, "BTC": 0.07, "cbBTC": 0.07, "tBTC": 0.07,
-    # Alt — %7.5-10
-    "LINK": 0.08, "AAVE": 0.075, "UNI":  0.08,
+    "wstETH":  0.072, "rETH":   0.075, "cbETH":   0.06,
+    "weETH":   0.075, "ezETH":  0.075, "rsETH":   0.075,
+    "osETH":   0.075, "sfrxETH": 0.075,
+    # BTC ailesi
+    "WBTC": 0.07, "BTC": 0.07, "cbBTC": 0.07, "tBTC": 0.075,
+    # Alt — Arbitrum AAVE/LINK/ARB %10
+    "LINK": 0.10, "AAVE": 0.10, "UNI":  0.08,
     "CRV":  0.10, "BAL":  0.10,  "SNX":  0.10,
     "MKR":  0.075,"LDO":  0.075, "RPL":  0.10,
-    "ARB":  0.075,"OP":   0.075, "GMX":  0.10,
+    "ARB":  0.10, "OP":   0.075, "GMX":  0.10,
     "COMP": 0.10, "WLD":  0.10,
 }
 DEFAULT_BONUS = 0.05
 
 WHITELIST_SYMBOLS: Set[str] = {
     "USDC", "USDC.e", "USDCe", "USDT", "DAI", "LUSD", "FRAX",
-    "GHO", "crvUSD", "USDS", "EURC", "EURA", "PYUSD",
+    "GHO", "crvUSD", "USDS", "EURC", "EURA", "PYUSD", "EURS", "MAI",
     "USD₮0", "USDT0", "USDt", "USDT.e", "USDTe", "USDC0", "USDCn",
     "WETH", "ETH", "wstETH", "rETH", "cbETH", "weETH",
     "ezETH", "rsETH", "osETH", "sfrxETH", "ankrETH",

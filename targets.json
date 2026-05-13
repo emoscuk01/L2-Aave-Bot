@@ -20,7 +20,7 @@
     "updated_at": "2026-05-10 10:42:23",
     "collateral_asset": "LINK",
     "debt_asset": "USDC",
-    "bonus_pct": 8.0,
+    "bonus_pct": 10.0,
     "effective_close_factor": 0.5
   },
   {
@@ -32,7 +32,7 @@
     "updated_at": "2026-05-10 10:42:23",
     "collateral_asset": "ARB",
     "debt_asset": "WETH",
-    "bonus_pct": 7.5,
+    "bonus_pct": 10.0,
     "effective_close_factor": 0.5
   },
   {
